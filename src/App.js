@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar from './components/NavBar';
+import Header from './components/Header';
 
 import './assets/css/jass.css';
 import './assets/css/style.css';
@@ -11,8 +12,11 @@ function App() {
     <div>
     <Router>
     <div className="App">
-      <NavBar />      
+      <NavBar style={{ marginBottom: 500}}/>             
     </div>
+   
+
+    <Header /> 
     </Router>    
     </div>
 
