@@ -161,6 +161,7 @@ hr:not([size]) {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+  
   .navbar > .container,
   .navbar > .container-fluid,
   .navbar > .container-sm,
@@ -172,7 +173,7 @@ hr:not([size]) {
     flex-wrap: inherit;
     align-items: center;
     justify-content: space-between;
-    /* background-color: var(--bs-gray); */
+    background-color: var(--bs-black);
   }
   
   .navbar-brand {
