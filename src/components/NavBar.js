@@ -2,10 +2,10 @@ import React from 'react';
 import resume from '../assets/Resume - Salvo Dragotta.pdf';
 
 
-export default function Nav() {
+export default function Nav({ sticky }) {
     return (
      <div>
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <nav className= {sticky ? "navbar navbar-expand-lg navbar-light fixed-top navbar-sticky" : "navbar navbar-expand-lg navbar-light fixed-top"} id="mainNav">
             <div className="container px-4 px-lg-5">
                 <a className="navbar-brand" href="#page-top">Salvo Dragotta</a>
                 {/* <button className="navbar-toggler navbar-toggler-right" 
