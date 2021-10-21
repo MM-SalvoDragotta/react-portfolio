@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactHtmlParser from 'react-html-parser'; 
-
+import ReactHtmlParser from 'react-html-parser'
 export default function Featured(props) {
     // console.log(props);
     
