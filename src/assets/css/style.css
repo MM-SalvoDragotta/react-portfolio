@@ -160,10 +160,11 @@ hr:not([size]) {
     justify-content: space-between;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    background-color: black !important;
   }
 
   .navbar-sticky {
-    background: #333;
+    background: #333 !important;
     position: fixed !important;
     top: 0 !important;
     left: 0 !important;
