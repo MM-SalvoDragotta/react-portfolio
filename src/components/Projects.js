@@ -9,7 +9,7 @@ export default function projectsSection() {
     console.log(featuredProject);
     return (        
         <section className="projects-section bg-light" id="projects">            
-            <Featured key={featuredProject.id} featuredProject={featuredProject}/>               
+            <Featured key={featuredProject[0].id} featuredProject={featuredProject[0]}/>               
         </section>
     )
 }
