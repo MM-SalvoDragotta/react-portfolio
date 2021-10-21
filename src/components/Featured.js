@@ -1,7 +1,9 @@
 import React from 'react';
+import ReactHtmlParser from 'react-html-parser'; 
 
 export default function Featured(props) {
     // console.log(props);
+    
     return (         
         <div className="container px-4 px-lg-5">      
             <div className="row gx-0 mb-4 mb-lg-5 align-items-center">
@@ -18,7 +20,7 @@ export default function Featured(props) {
                     <div className="featured-text text-center text-lg-left">
                         <h4>{props.featuredProject.title}</h4>
                         <p className="text-black-50 mb-0 text-black-50-reducedfont">
-                            {props.featuredProject.description}
+                            {ReactHtmlParser(props.featuredProject.description)}
                             <a href={props.featuredProject.repo}
                                 title={`Link to GitHub Repository for ${props.featuredProject.title}`} target="_blank"
                                 className="btn"> 
