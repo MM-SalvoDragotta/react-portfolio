@@ -4,8 +4,7 @@ import groceriesGif from './assets/images/grocery-delivery-application.gif'
 
 export const projects = [
   {
-    id: "Grocery Delivery App",
-    gifTitle : "Deployed Grocery Delivery App",
+    id: "Grocery Delivery App",    
     title: "Grocery Delivery App",
     description:`
     "This project is for an online department store customer and admin side."
