@@ -490,9 +490,9 @@ hr:not([size]) {
   height: 440px;
 }  
 
-.tech-blog{
+.img-h{
   width: auto;
-  height: 440px;
+  height: 430px;
 }  
 
 .covid-tracker{
@@ -519,8 +519,8 @@ hr:not([size]) {
           font-size: 2rem;
       }
       .label{
-        font-size: 0.5rem;
-        top : 30%;
+        font-size: 0.5rem !important;
+        top : 30% !important;
         }
     .img-fluid-project {
         max-width: 80%;
@@ -716,13 +716,13 @@ svg {
   }
 
   .label {
-    background-color: var(--bs-blue);
-    text-shadow: 2px 2px 16px var(--bs-dark);
-    color: var(--bs-white);
-    font-size: 1.5rem;
-    padding: 10px;
-    position: absolute;
-    top: 60%;
+    background-color: var(--bs-blue) !important;
+    text-shadow: 2px 2px 16px var(--bs-dark) !important;
+    color: var(--bs-white) !important;
+    font-size: 1.5rem !important;
+    padding: 10px !important;
+    position: absolute !important;
+    top: 60% !important;
     
 }
 
@@ -810,6 +810,12 @@ svg {
     border-radius: 1rem !important;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
     margin-top: 1rem !important;
+  }
+
+  .btn:hover {
+    color: #fff !important;
+    background-color:red  !important;
+    border-color:black !important;
   }
 
 .btn-primary {
