@@ -34,9 +34,9 @@ export default function Contact() {
                             </Form.Group>
                      
                             {/* Message input */}
-                            <Form.Group className="mb-3">                         
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">                         
                                 <Form.Label className="text-white-50">Message</Form.Label>
-                                <Form.Control type="text" placeholder="Enter your message here..." style={{height: "10rem"}} />                        
+                                <Form.Control as="textarea" placeholder="Enter your message here..." style={{height: "10rem"}} rows={3} />                        
                             </Form.Group>                     
                                           
                             {/* Submit Button */}
