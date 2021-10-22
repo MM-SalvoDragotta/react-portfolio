@@ -970,7 +970,7 @@ a:hover {
   display: flex;
 }
 
-.btn {
+/* .btn {
   cursor: pointer;
   text-align: center;
   display: inline-block;
@@ -984,7 +984,7 @@ a:hover {
   color: #1a1a1a;
   background-color: #aeaeae;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
+} */
 
 .btn:hover {
   background-color: #cecece;
@@ -1547,8 +1547,8 @@ label form [type='radio'] {
     max-width: 41.66667%;
   }
   .col-lg-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
   }
   .col-lg-7 {
     flex: 0 0 58.33333%;
