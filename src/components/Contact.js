@@ -1,7 +1,51 @@
-import React from 'react';
+import React, { useState } from "react";
+import { validateEmail } from "../utils/helpers";
 import {Form , Button} from 'react-bootstrap'
 
 export default function Contact() {
+    const [formState, setFormState] = useState({
+		fullName: "",
+		email: "",        
+		message: "",
+	});
+
+    const [errorMessage, setErrorMessage] = useState("");
+
+	const { fullName, email, message } = formState;
+
+    function handleChange(e) {
+		if (e.target.name === "email") {
+			const isValid = validateEmail(e.target.value);
+			if (!isValid) {
+				setErrorMessage("Your email is invalid.");
+			} else {
+				if (!e.target.value) {
+					setErrorMessage(`${e.target.name} is required.`);
+				} else {
+					setErrorMessage("");
+				}
+			}
+		}
+
+		if (!errorMessage) {
+			setFormState({ ...formState, [e.target.name]: e.target.value });
+		}
+	}
+
+	function handleBlank(e) {
+		if (e.target.name === "Name" || e.target.name === "Message" || e.target.name === "phoneNumber") {
+			if (!e.target.value.length) {
+				setErrorMessage(`${e.target.name} is required.`);
+			} else {
+				setErrorMessage("");
+			}
+		}
+
+		if (!errorMessage) {
+			setFormState({ ...formState, [e.target.name]: e.target.value });
+		}
+	}
+
     return (
         <section className="about-section" id="contact">
             <div className="container px-4 px-lg-5">
@@ -17,32 +61,33 @@ export default function Contact() {
                         <Form id="contactForm">
                             {/* Name input> */}
                             <Form.Group className="mb-3">                         
-                                <Form.Label className="text-white-50">Full name</Form.Label>
-                                <Form.Control type="text" placeholder="Enter your name..." />                        
+                                <Form.Label htmlFor="Name" className="text-white-50">Full name</Form.Label>
+                                <Form.Control type="text" placeholder="Enter your name..." onBlur={handleBlank} defaultValue={fullName} name="Name"/>                        
                             </Form.Group>
 
                             {/* Email address input */}
                             <Form.Group className="mb-3" controlId="formBasicEmail">                         
-                                <Form.Label className="text-white-50">Email address</Form.Label>
-                                <Form.Control type="email" placeholder="name@example.com"  />                        
-                            </Form.Group>
-        
-                            {/* Phone number input */}
-                            <Form.Group className="mb-3">                         
-                                <Form.Label className="text-white-50">Phone number</Form.Label>
-                                <Form.Control type="tel" placeholder="(123) 456-7890"  />                        
-                            </Form.Group>
-                     
+                                <Form.Label htmlFor="email" className="text-white-50">Email address</Form.Label>
+                                <Form.Control type="email" placeholder="name@example.com" onBlur={handleChange} defaultValue={email} name="email" />                        
+                            </Form.Group>      
+                                              
                             {/* Message input */}
                             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">                         
-                                <Form.Label className="text-white-50">Message</Form.Label>
-                                <Form.Control as="textarea" placeholder="Enter your message here..." style={{height: "10rem"}} rows={3} />                        
-                            </Form.Group>                     
+                                <Form.Label htmlFor="Message" className="text-white-50">Message</Form.Label>
+                                <Form.Control as="textarea" placeholder="Enter your message here..." style={{height: "10rem"}} rows={3} onBlur={handleBlank} defaultValue={message} name="Message"/>                        
+                            </Form.Group>  
+
+                            {errorMessage && (
+                                <div>
+                                    <p className="text-white-50">{errorMessage}</p>
+                                </div>
+				        	)}                   
                                           
                             {/* Submit Button */}
                             <Button className="btn btn-xl text-white-50" variant="primary" type="submit">
                                 Submit
-                            </Button>                     
+                            </Button>
+
                         </Form>
                     </div>
                 </div>
