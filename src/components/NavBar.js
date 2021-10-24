@@ -8,7 +8,7 @@ export default function Nav(props) {
      <div>
         <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div className="container px-4 px-lg-5">
-                <a className="navbar-brand" href="/">Salvo Dragotta</a>
+                <a className="navbar-brand" href="/react-portfolio">Salvo Dragotta</a>
                 {/* <button className="navbar-toggler navbar-toggler-right" 
                 type="button" data-bs-toggle="collapse" 
                 data-bs-target="#navbarResponsive" 
