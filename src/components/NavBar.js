@@ -20,10 +20,10 @@ export default function Nav(props) {
                 </button> */}
                 <div className="navbar-collapse w-75 dual-collapse2" id="navbarResponsive">
                     <ul className="navbar-nav ml-auto">
-                        <li className="nav-item"><a className="nav-link" href="about" onClick={() => setCurrentTab("about")}>About</a></li>
-                        <li className="nav-item"><a className="nav-link" href="projects" onClick={() => setCurrentTab("projects")}>Projects</a></li>
-                        <li className="nav-item"><a className="nav-link" href="contact" onClick={() => setCurrentTab("contact")}>Contact</a></li>
-                        <li className="nav-item"><a className="nav-link" href="resume"  onClick={() => setCurrentTab("resume")}>Resume</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#about" onClick={() => setCurrentTab("about")}>About</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#projects" onClick={() => setCurrentTab("projects")}>Projects</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#contact" onClick={() => setCurrentTab("contact")}>Contact</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#resume"  onClick={() => setCurrentTab("resume")}>Resume</a></li>
                     </ul>
                 </div>             
             </div>
